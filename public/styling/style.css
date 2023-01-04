@@ -1,0 +1,33 @@
+#toDoTasksContainer
+{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    margin-top: 10px;
+}
+
+.taskCheckmarkClass
+{
+    position: absolute; 
+    left: 90%; 
+    font-size:140%; 
+    font-weight: bold
+}
+
+.taskPlusClass
+{
+    position: absolute; 
+    left: 80%; 
+    font-size:150%; 
+    font-weight: bold;
+}
+
+#toDoTasksTable
+{
+    width: 40%;
+    position: relative;
+    left: 30%;
+    bottom: 20%;
+}
