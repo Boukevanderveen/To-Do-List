@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('photoId')->nullable();
-            $table->boolean('displayed')->default(0);
-
+            $table->boolean('isDone')->default(0);
+            $table->timestamps();
         });
     }
 
