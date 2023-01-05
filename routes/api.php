@@ -19,5 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/', function () {
-    return view('main');
+    return view('layouts.app', [
+//        'showToDoTasks' => 1
+    ]);
 });
+
