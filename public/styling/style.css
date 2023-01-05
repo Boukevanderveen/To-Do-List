@@ -5,7 +5,19 @@
     -ms-user-select: none; /* IE10+/Edge */
     user-select: none; /* Standard */
 
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+#doneTasksContainer
+{
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+
+    margin-top: 20px;
+
+    display: none;
 }
 
 .taskCheckmarkClass
@@ -27,7 +39,42 @@
 #toDoTasksTable
 {
     width: 40%;
-    position: relative;
+    position: absolute;
     left: 30%;
-    bottom: 20%;
+}
+
+#doneTasksTable
+{
+    width: 40%;
+    position: absolute;
+    left: 30%;
+}
+
+.doneTasksRow
+{
+    text-decoration: line-through;
+}
+
+#showToDoListButton
+{
+    padding: 0;
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    position: relative;
+    left: 35%;
+}
+
+#showDoneListButton
+{
+    padding: 0;
+    border: none;
+    background: none;
+
+    font-size: 30px;
+
+    position: relative;
+    left: 55%;
 }
