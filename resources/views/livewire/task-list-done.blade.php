@@ -6,9 +6,9 @@
         <tr>
           <td class="doneTasksRow">
             {{$task->name}}
-         
+            <p style="display: none"> {{$taskId = $task->id}} </p>
+            <button wire:click="setTaskToDo('{{$taskId}}')" class="taskBackArrowButton">←</button>
             <i class="taskPlusButton">+</i>
-            <i class="taskBackArrowButton">←</i>
         </td>
         </tr>
       </tbody>
