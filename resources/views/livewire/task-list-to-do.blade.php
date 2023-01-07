@@ -6,10 +6,12 @@
         <tr>
           <td>
             {{$task->name}}
-         
-            <i class="taskPlusClass">+</i>
-            <i class="taskCheckmarkClass">✓</i>
-        </td>
+            <p style="display: none"> {{$taskId = $task->id}} </p>
+
+            <button type="submit" class="taskPlusButton">+</button>
+            
+            <button wire:click="submitForm('{{$taskId}}')" class="taskCheckmarkButton">✓</button>
+          </td>
         </tr>
       </tbody>
     @endforeach

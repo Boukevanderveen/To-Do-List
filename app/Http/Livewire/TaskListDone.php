@@ -7,13 +7,7 @@ use Livewire\Component;
 
 class TaskListDone extends Component
 {
-    public function switch2()
-    {
-        $showToDoTasks = 1;
-
-        $this->emit('refreshBase');
-
-    }
+    protected $listeners = ['refreshDoneList' => '$refresh'];
 
     public function render()
     {

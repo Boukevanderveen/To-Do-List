@@ -20,19 +20,39 @@
     display: none;
 }
 
-.taskCheckmarkClass
+.taskCheckmarkButton
 {
+    padding: 0;
+    border: none;
+    background: none;
+
     position: absolute; 
     left: 90%; 
     font-size:140%; 
-    font-weight: bold
+    font-weight: bold;
 }
 
-.taskPlusClass
+.taskPlusButton
 {
+    padding: 0;
+    border: none;
+    background: none;
+
     position: absolute; 
     left: 80%; 
     font-size:150%; 
+    font-weight: bold;
+}
+
+.taskBackArrowButton
+{
+    padding: 0;
+    border: none;
+    background: none;
+
+    position: absolute; 
+    left: 90%; 
+    font-size:160%; 
     font-weight: bold;
 }
 
