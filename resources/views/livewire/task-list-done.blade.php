@@ -7,8 +7,8 @@
           <td class="doneTasksRow">
             {{$task->name}}
          
-            <i class="taskPlusClass">+</i>
-            <i class="taskCheckmarkClass">✓</i>
+            <i class="taskPlusButton">+</i>
+            <i class="taskBackArrowButton">←</i>
         </td>
         </tr>
       </tbody>

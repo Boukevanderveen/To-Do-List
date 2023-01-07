@@ -11,10 +11,14 @@ class AddTaskForm extends Component
     public $name;
 
     //  Validatie regels
- 
+    protected $rules = [
+        'name' => 'required|string|min:3',
+    ];
 
     public function submitForm()
     {
+
+        $this->validate();
 
         Task::create([
             'name' => $this->name,
