@@ -16,5 +16,18 @@ class TaskListDone extends Component
             'tasks' => Task::where('isDone', '=', 1)->get()
         ]);
     }
+
+    public function setTaskToDo($taskId)
+    {
+   
+        Task::where('id', $taskId)->update(['isDone'=> '0']);
+
+        $this->emit('refreshToDoList');
+
+        $this->emit('refreshDoneList');
+        
+        
+    }
+
 }
 

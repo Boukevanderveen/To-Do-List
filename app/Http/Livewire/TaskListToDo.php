@@ -22,7 +22,7 @@ class TaskListToDo extends Component
     {
     }
 
-    public function submitForm($taskId)
+    public function setTaskDone($taskId)
     {
    
         Task::where('id', $taskId)->update(['isDone'=> '1']);

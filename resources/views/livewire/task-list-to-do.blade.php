@@ -10,7 +10,7 @@
 
             <button type="submit" class="taskPlusButton">+</button>
             
-            <button wire:click="submitForm('{{$taskId}}')" class="taskCheckmarkButton">✓</button>
+            <button wire:click="setTaskDone('{{$taskId}}')" class="taskCheckmarkButton">✓</button>
           </td>
         </tr>
       </tbody>
