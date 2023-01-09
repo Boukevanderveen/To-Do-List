@@ -100,7 +100,7 @@
     left: 55%;
 }
 
-#showAddTaskFormButton
+#addTaskFormButton
 {
     position: fixed;
     top: 90%;
@@ -150,4 +150,72 @@
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+#detailScreenDiv
+{
+    position: absolute; 
+    left: 30%; 
+    top: 2%; 
+    height: 60%; 
+    width: 40%; 
+    z-index: 6; 
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#taskPhotoDiv
+{
+
+    border-style: solid;
+    border-width: 1px;
+    position: absolute; 
+    left: 30%; 
+    top: 15%; 
+    height: 40%; 
+    width: 40%;
+}
+
+#closeTaskDetailsButton
+{
+    display: none;
+
+    padding: 0;
+    border: none;
+    background: none;
+
+    font-size: 20px;
+
+    position: absolute;
+    top: 62%;
+    left: 47%;
+}
+
+#taskname
+{
+    padding: 0;
+    border: none;
+    background: none;
+
+    font-size: 20px;
+
+    position: relative;
+    top: 7%;
+    left: 45%;
+}
+
+#modifyImageButton
+{
+    position: absolute;
+    top: 60%;
+    left: 40%;
+}
+
+.editTaskDiv
+{
+    
+    position: absolute;
+    top: 75%;
+    left: 40%;
 }

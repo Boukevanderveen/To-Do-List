@@ -19,6 +19,11 @@ function showAddTaskForm()
     addTaskFormDiv.style.display = "block";
 }
 
+function showEditTaskInput()
+{
+    editTaskDiv.style.display = "block";
+}
+
 function hideAddTaskForm()
 {
     addTaskFormDiv.style.display = "none";

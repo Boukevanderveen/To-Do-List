@@ -10,22 +10,28 @@ class AddTaskForm extends Component
 
     public $name;
 
-    //  Validatie regels
-    protected $rules = [
-        'name' => 'required|string|min:3',
-    ];
-
-    public function submitForm()
+    public function addTask()
     {
 
-        $this->validate();
+        $this->validate([
+            'name' => 'required|string|min:3|max:36',
+        ]);
 
         Task::create([
             'name' => $this->name,
         ]);
 
-        $this->emit('refreshToDoList');
+        $count = Task::count();
         
+        // Bij alleen de eerste task wordt de pagina herverst, vanwege dat taskId alleen na het maken van de eerste task niet defined is na het herversen van de component.
+        if ($count < 2)
+        {
+            return redirect()->to('/');
+        }
+        else
+        {
+            $this->emit('refreshToDoList');
+        }
     }
 
     public function render()

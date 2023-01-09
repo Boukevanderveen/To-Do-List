@@ -8,11 +8,17 @@ use Livewire\Component;
 
 class TaskListToDo extends Component
 {
+    public $show = false;
+    public $selectedTask = 0;
+
 
     protected $listeners = ['refreshToDoList' => '$refresh'];
+    
 
     public function render(): View
     {
+    $selectedTask = 0;
+
         return view('livewire.task-list-to-do', [
             // Haalt alle To Do taken op
             'tasks' => Task::where('isDone', '=', 0)->get(),
@@ -30,8 +36,18 @@ class TaskListToDo extends Component
         $this->emit('refreshToDoList');
 
         $this->emit('refreshDoneList');
-        
-        
+
+    }
+
+    public function showDetails($taskId)
+    {
+        $this->emit('rerender', $taskId);
+        $show = true;
+    }
+
+    public function hideDetails()
+    {
+        $selectedTask = 0;
     }
 
 }
