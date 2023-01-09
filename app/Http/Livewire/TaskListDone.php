@@ -2,12 +2,17 @@
 
 namespace App\Http\Livewire;
 use App\Models\Task;
+use App\Models\Photo;
 
 use Livewire\Component;
 
 class TaskListDone extends Component
 {
     protected $listeners = ['refreshDoneList' => '$refresh'];
+
+    public $selectedTask = 0;
+
+    public $taskId;
 
     public function render()
     {
@@ -19,14 +24,32 @@ class TaskListDone extends Component
 
     public function setTaskToDo($taskId)
     {
-   
         Task::where('id', $taskId)->update(['isDone'=> '0']);
 
         $this->emit('refreshToDoList');
 
         $this->emit('refreshDoneList');
         
-        
+    }
+
+    public function deleteTask($taskId)
+    {
+        $task = Task::find($taskId);
+        $task->delete();
+
+        // Controleerd of de task een foto heeft en verwijderd de foto in dat geval
+
+        if (Photo::where('id','=',$taskId)->exists())
+        {
+            $photo = Photo::find($taskId);
+            $photo->delete();
+        }
+
+    
+        $this->emit('refreshToDoList');
+
+        $this->emit('refreshDoneList');
+
     }
 
 }
